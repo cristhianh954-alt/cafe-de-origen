@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2b1d1a;
+    background-color: #f7f1e8; /* Crema suave de Café de Origen */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.seccion-titulo {
+    font-size: 1.75rem;
+    color: #4b2e2a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.cabecera {
+    background-color: #4b2e2a;
+    color: #f7f1e8;
+    padding: 1rem 0;
+}
+
+.cabecera__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav__destacado {
+    background-color: #c8873d;
+    color: #2b1d1a;
+    font-weight: 700;
+}
+
+.seccion-destinos {
+    padding: 3rem 0;
+}
+
+.destinos {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en celular */
+    gap: 1.5rem;
+}
+
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta img.imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 1.25rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contenido-tarjeta h3 {
+    color: #4b2e2a;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-tarjeta p {
+    font-size: 0.95rem;
+    color: #2b1d1a;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+    text-align: left; 
+}
+
+.boton {
+    display: inline-block;
+    background-color: #2f5d50; 
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
+
+
+.seccion-galeria {
+    background-color: #ffffff; 
+    padding: 3rem 0;
+}
+
+.seccion-galeria {
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+
+.galeria-fotos {
+    display: flex;    /* Pone todas las fotos en una sola fila horizontal */
+    gap: 1.25rem;
+    width: max-content;
+    animation: deslizarGaleria 30s linear infinite; /* Se mueve sola en 30 segundos */
+}
+
+.galeria-fotos:hover {
+    animation-play-state: paused;
+}
+
+.carrusel{
+    overflow: hidden; /* Recorta las fotos que salen por los lados */
+    width: 100%;
+    padding: 1rem 0;  /* Espacio para que no se corte la sombra al pasar el mouse */
+}
+
+.foto {
+    width: 240px;     /* Ancho de cada foto en celular */
+    height: 170px;    /* Alto fijo para que todas se vean parejitas */
+    flex-shrink: 0;   /* Evita que las fotos se aplasten */
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes deslizarGaleria {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 0.625rem));
+    }
+}
+
+.footer {
+    background-color: #2b1d1a;
+    color: #f7f1e8;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+.footer p {
+    margin: 0.25rem 0;
+}
+
+
+@media (min-width: 768px) {
+    .mensaje {
+        background-color: #2f5d50; /* Verde */
+    }
+    .mensaje::after {
+        content: "Versión Tablet (768px a 1023px)";
+    }
+
+    .cabecera__contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 0.25rem;
+    }
+
+    .menu a {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .destinos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .galeria-fotos {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1,25rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .mensaje {
+        background-color: #c8873d; 
+        color: #2b1d1a;
+    }
+    .mensaje::after {
+        content: "Versión Escritorio (≥ 1024px)";
+    }
+
+    .destinos {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .galeria-fotos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+
