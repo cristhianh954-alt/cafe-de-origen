@@ -166,8 +166,21 @@ width: 100%;
  font-size: 0.875rem;
 }
 
+.menu-boton {
+  background: transparent;
+  border: 2px solid #f7f1e8;
+  color: #f7f1e8;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 .nav__lista { 
 display: none; 
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
 }
 
 .nav__lista.abierto { display:
@@ -185,6 +198,9 @@ flex;
 
  .nav__lista {
  display: flex; 
+ flex-direction: row;
+ gap: 0.25rem;
+  }
  }
  
  .header__contenido {
@@ -210,7 +226,7 @@ flex;
  .contacto__bloque {
  flex: 1;
  }
-}
+
 
 @media (min-width: 1024px) {
  .hero {
