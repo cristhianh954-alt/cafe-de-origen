@@ -166,7 +166,22 @@ width: 100%;
  font-size: 0.875rem;
 }
 
+.nav__lista { 
+display: none; 
+}
+
+.nav__lista.abierto { display:
+flex; 
+}
+
 @media (min-width: 768px) {
+.menu-boton { 
+display: none; 
+}
+
+.nav__lista {
+display: flex; 
+ }
 }
 
 @media (min-width: 768px) {
