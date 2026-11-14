@@ -175,16 +175,18 @@ flex;
 }
 
 @media (min-width: 768px) {
-.menu-boton { 
-display: none; 
-}
 
-.nav__lista {
-display: flex; 
- }
 }
 
 @media (min-width: 768px) {
+ .menu-boton { 
+ display: none; 
+ }
+
+ .nav__lista {
+ display: flex; 
+ }
+ 
  .header__contenido {
  flex-direction: row;
  justify-content: space-between;
