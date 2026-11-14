@@ -175,6 +175,13 @@ flex;
 }
 
 @media (min-width: 768px) {
+.menu-boton { 
+display: none; 
+}
+
+.nav__lista {
+display: flex; 
+ }
 }
 
 @media (min-width: 768px) {
